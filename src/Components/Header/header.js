@@ -8,6 +8,8 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
   gap: 4rem;
+  position: fixed;
+  z-index: 100;
 
   img {
     margin-left: 5rem;
@@ -18,14 +20,14 @@ export const Header = styled.header`
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.6rem;
-  }
 
-  .nav_link.active {
-    color: ${colors.blue};
-  }
+    &.active {
+      color: ${colors.blue};
+    }
 
-  .nav_link:hover {
-    color: ${colors.blue};
+    &:hover {
+      color: ${colors.blue};
+    }
   }
 
   .nav_link::after {
