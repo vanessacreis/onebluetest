@@ -14,4 +14,8 @@ export const Main = styled.main`
     ),
     url(/src/Assets/imgs/bg_signup.jpg);
   background-size: cover;
+
+  .toast {
+    font-size: 1.6rem;
+  }
 `;
