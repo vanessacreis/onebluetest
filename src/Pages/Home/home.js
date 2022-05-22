@@ -13,7 +13,7 @@ export const Main = styled.main`
 
 export const Home = styled.section`
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   background-image: linear-gradient(
       to bottom,
       transparent 0%,
@@ -58,7 +58,7 @@ export const Home = styled.section`
 
 export const About = styled.section`
   width: 100%;
-  height: 70vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,5 +104,52 @@ export const Wrapper = styled.div`
       font-size: 1.8rem;
       text-align: center;
     }
+  }
+`;
+
+export const Pics = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    ${colors.darkgray} 95%
+  );
+
+  .col-a {
+    width: 50%;
+    padding: 10rem;
+
+    h2 {
+      font-size: 3.6rem;
+      font-weight: 300;
+    }
+
+    .no {
+      display: flex;
+      margin-block: 5rem;
+      > h2 {
+        font-size: 7rem;
+        font-weight: 300;
+        margin-right: 2rem;
+        text-transform: uppercase;
+      }
+      > p {
+        font-size: 2.4rem;
+        line-height: 3rem;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .col-b {
+    width: 50%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
