@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import * as S from "./Success.js";
 import "animate.css";
+import Carousel from "../../Components/Carousel/Carousel.jsx";
 
 const Account = () => {
   const { name } = useParams();
@@ -24,7 +25,9 @@ const Account = () => {
           Soon in your app store.
         </Link>
       </div>
-      <div className="col-b"></div>
+      <div className="col-b">
+        <Carousel />
+      </div>
     </S.Main>
   );
 };
