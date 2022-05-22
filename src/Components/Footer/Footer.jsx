@@ -8,7 +8,7 @@ const Footer = () => {
     <S.Footer>
       <S.Copyright>
         <p>
-          Developed by Vanessa Reis. &copy; One Blue Network. All Rights
+          Developed with ❤️ by Vanessa Reis. &copy; One Blue Network. All Rights
           Reserved.
         </p>
       </S.Copyright>
