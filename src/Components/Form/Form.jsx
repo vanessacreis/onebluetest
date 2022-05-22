@@ -8,6 +8,9 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import { toast, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import "animate.css";
 
 const validationPost = yup.object().shape({
   name: yup.string().required("Name field is required."),
@@ -37,18 +40,47 @@ const Form = ({ apiroute, namebtn }) => {
   const api = (data) => {
     Api.post(`${apiroute}`, data)
       .then((response) => {
-        const name = response.data.login;
-        console.log(name);
-        navigate(`/success/${name}`);
+        if (apiroute === "/login") {
+          const name = response.data.login;
+          toast.success("Hi, welcome back!😄", {
+            className: "toast",
+            draggable: false,
+            transition: Zoom,
+          });
+          setTimeout(() => {
+            navigate(`/success/${name}`);
+          }, 3000);
+        } else {
+          toast.success("Yeah! Your account has created! 🎉 ", {
+            className: "toast",
+            draggable: false,
+            transition: Zoom,
+          });
+          setTimeout(() => {
+            navigate("/login");
+          }, 3000);
+        }
+
         console.log(response);
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => {
+        if (error) {
+          toast.error(
+            "Oh-oh... Please, check your informations and try again.😥",
+            {
+              className: "toast",
+              draggable: false,
+              transition: Zoom,
+            }
+          );
+        }
+      });
   };
 
   return (
-    <S.Container>
+    <S.Container className="animate__animated animate__fadeIn">
       <header>
-        <img src={Icon} alt="" />
+        <img src={Icon} alt="" className="animate__animated animate__pulse" />
         <h1>Stories App </h1>
         <h3>
           I just want to see <span className="blueText">beauty</span> in the
@@ -65,7 +97,7 @@ const Form = ({ apiroute, namebtn }) => {
         />
         <Input
           name="password"
-          type="text"
+          type="password"
           register={{ ...register("password") }}
           onChange={handleOnChange}
           error={errors.password?.message}

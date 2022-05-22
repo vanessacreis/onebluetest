@@ -12,6 +12,10 @@ export const Container = styled.div`
   align-items: center;
   border-radius: 0.5rem;
 
+  .toast {
+    font-size: 1.6rem;
+  }
+
   > header {
     display: flex;
     flex-direction: column;
