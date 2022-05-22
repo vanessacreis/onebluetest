@@ -4,7 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Carousel = () => {
+const Carousel = ({ img1, img2, img3, img4, img5, img6 }) => {
   const settings = {
     arrows: false,
     autoplay: true,
@@ -20,40 +20,22 @@ const Carousel = () => {
     <S.Carousel>
       <Slider {...settings}>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-1.jpg"
-            alt="Imagem do carrossel"
-          />
+          <img src={img1} alt="Imagem do carrossel" />
         </div>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-2.png"
-            alt="Imagem do carrossel"
-          />
+          <img src={img2} alt="Imagem do carrossel" />
         </div>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-3.png"
-            alt="Imagem do carrossel"
-          />
+          <img src={img3} alt="Imagem do carrossel" />
         </div>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-4.png"
-            alt="Imagem do carrossel"
-          />
+          <img src={img4} alt="Imagem do carrossel" />
         </div>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-5.png"
-            alt="Imagem do carrossel"
-          />
+          <img src={img5} alt="Imagem do carrossel" />
         </div>
         <div>
-          <img
-            src="/src/Assets/imgs/carousel-6.jpg"
-            alt="Imagem do carrossel"
-          />
+          <img src={img6} alt="Imagem do carrossel" />
         </div>
       </Slider>
     </S.Carousel>
