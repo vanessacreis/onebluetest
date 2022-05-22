@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import * as S from "./signupForm.js";
-import SIcon from "../../Assets/icons/icon_black_small.png";
+import * as S from "./form.js";
+import Icon from "../../Assets/icons/icon_black_small.png";
 import Input from "../Input/Input.jsx";
 import Button from "../Button/Button.jsx";
 import { Api } from "../../Services/api.js";
@@ -17,40 +17,45 @@ const validationPost = yup.object().shape({
     .max(8, "Password must be a maximum of 8 characters."),
 });
 
-const SignupForm = () => {
-  const [data, setData] = useState({});
+const Form = ({ apiroute, namebtn }) => {
+  const [data, setData] = useState({
+    name: "",
+    password: "",
+  });
   const navigate = useNavigate();
 
   const handleOnChange = () => {
-    setData({ ...dados, [e.target.name]: e.target.value });
+    setData({ ...data, [e.target.name]: e.target.value });
   };
 
   const {
     register,
     handleSubmit,
-    setValue,
     formState: { errors },
   } = useForm({ resolver: yupResolver(validationPost) });
 
   const api = (data) => {
-    Api.post("/user/cadaster", data)
+    Api.post(`${apiroute}`, data)
       .then((response) => {
-        navigate("/home");
+        const name = response.data.login;
+        console.log(name);
+        navigate(`/success/${name}`);
+        console.log(response);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => console.log(error.message));
   };
 
   return (
     <S.Container>
       <header>
-        <img src={SIcon} alt="" />
+        <img src={Icon} alt="" />
         <h1>Stories App </h1>
         <h3>
           I just want to see <span className="blueText">beauty</span> in the
           world.
         </h3>
       </header>
-      <S.Form>
+      <S.Form onSubmit={handleSubmit(api)}>
         <Input
           name="name"
           type="text"
@@ -60,15 +65,15 @@ const SignupForm = () => {
         />
         <Input
           name="password"
-          type="password"
+          type="text"
           register={{ ...register("password") }}
           onChange={handleOnChange}
           error={errors.password?.message}
         />
-        <Button name="Sign up" />
+        <Button name={namebtn} />
       </S.Form>
     </S.Container>
   );
 };
 
-export default SignupForm;
+export default Form;
