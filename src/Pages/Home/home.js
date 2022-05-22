@@ -90,6 +90,13 @@ export const Wrapper = styled.div`
       height: 80%;
       object-fit: cover;
       border-radius: 0.5rem;
+      opacity: 0.8;
+      transition: opacity 0.8s;
+
+      &:hover {
+        opacity: 1;
+        box-shadow: 2px 2px 5px ${colors.darkgray};
+      }
     }
 
     > p {
