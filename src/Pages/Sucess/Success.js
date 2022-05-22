@@ -3,7 +3,7 @@ import { colors } from "../../Style/globalStyle.js";
 
 export const Main = styled.main`
   width: 100vw;
-  height: calc(100vh - 5rem);
+  height: calc(100vh - 4rem);
   padding-top: 10rem;
   background-image: linear-gradient(
       to bottom,

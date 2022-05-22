@@ -9,7 +9,7 @@ const Account = () => {
 
   return (
     <S.Main>
-      <div className="col-a animate__animated animate__fadeIn">
+      <div className="col-a animate__animated animate__fadeInLeft">
         <h1>
           Hi <span className="blueText">{name}</span>!
         </h1>
@@ -25,8 +25,15 @@ const Account = () => {
           Soon in your app store.
         </Link>
       </div>
-      <div className="col-b">
-        <Carousel />
+      <div className="col-b animate__animated animate__fadeIn">
+        <Carousel
+          img1="/src/Assets/imgs/carousel-7.jpg"
+          img2="/src/Assets/imgs/carousel-8.jpg"
+          img3="/src/Assets/imgs/carousel-9.jpg"
+          img4="/src/Assets/imgs/carousel-10.jpg"
+          img5="/src/Assets/imgs/carousel-11.jpg"
+          img6="/src/Assets/imgs/carousel-12.jpg"
+        />
       </div>
     </S.Main>
   );
