@@ -1,11 +1,11 @@
 import React from "react";
-import LoginForm from "../../Components/LoginForm/LoginForm.jsx";
+import Form from "../../Components/Form/Form.jsx";
 import * as S from "./login.js";
 
 const Login = () => {
   return (
     <S.Main>
-      <LoginForm />
+      <Form apiroute="/login" namebtn="Login" />
     </S.Main>
   );
 };

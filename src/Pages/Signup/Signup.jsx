@@ -1,11 +1,11 @@
 import React from "react";
-import SignupForm from "../../Components/SignupForm/SignupForm.jsx";
+import Form from "../../Components/Form/Form.jsx";
 import * as S from "./signup.js";
 
 const Signup = () => {
   return (
     <S.Main>
-      <SignupForm />
+      <Form apiroute="/user/cadaster" namebtn="Create my account" />
     </S.Main>
   );
 };
