@@ -23,8 +23,8 @@ export const Home = styled.section`
   background-size: cover;
   padding-top: 10rem;
 
-  > .content {
-    width: 35rem;
+  .content {
+    width: 40rem;
     height: 15rem;
     display: flex;
     flex-direction: column;
@@ -36,13 +36,14 @@ export const Home = styled.section`
 
     > h1 {
       font-weight: 300;
-      font-size: 3.6rem;
+      font-size: 4.2rem;
       line-height: 5rem;
       text-align: center;
       color: ${colors.black};
     }
 
     > .button {
+      margin: 4rem;
       padding-inline: 3.6rem;
       padding-block: 1.2rem;
       border-radius: 1.5rem;
@@ -56,54 +57,45 @@ export const Home = styled.section`
 `;
 
 export const About = styled.section`
-  width: 100vw;
-  height: 80vh;
+  width: 100%;
+  height: 70vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  > .wrapper {
+  h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 5rem;
+  }
+`;
+
+export const Wrapper = styled.div`
+  width: 90%;
+  height: 80%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1;
+  gap: 2rem;
+  .topics {
+    width: 100%;
     height: 100%;
-    width: 95%;
-    margin-inline: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
 
-    > .col-a {
-      width: 60%;
-
-      > h2 {
-        width: 40rem;
-        font-weight: 400;
-        font-size: 2.8rem;
-        line-height: 3.6rem;
-        margin-bottom: 2.5rem;
-      }
-
-      > p {
-        width: 50rem;
-        font-size: 1.8rem;
-        line-height: 2.6rem;
-      }
-
-      > .noBox {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        > .no {
-          font-size: 10rem;
-          text-transform: uppercase;
-          font-weight: 300;
-        }
-
-        > p {
-          font-size: 1.6rem;
-        }
-      }
+    > img {
+      width: 80%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 0.5rem;
     }
 
-    > .col-b {
-      width: 40%;
+    > p {
+      margin-top: 1rem;
+      font-size: 1.8rem;
+      text-align: center;
     }
   }
 `;

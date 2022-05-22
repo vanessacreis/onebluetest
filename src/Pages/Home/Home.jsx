@@ -1,13 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Carousel from "../../Components/Carousel/Carousel.jsx";
 import * as S from "./home.js";
+import { Link } from "react-router-dom";
+import { AnimationOnScroll } from "react-animation-on-scroll";
+import "animate.css";
 
 const Home = () => {
   return (
     <S.Main>
       <S.Home>
-        <div className="content">
+        <div className="content animate__animated animate__fadeInLeft">
           <h1>
             I just want to see <span className="blueText">beauty</span> in the
             world. <br />
@@ -18,39 +19,38 @@ const Home = () => {
         </div>
       </S.Home>
       <S.About>
-        <div className="wrapper">
-          <div className="col-a">
-            <h2>
-              Complete your <span className="blueText">history</span> with
-              Stories App.
-            </h2>
-            <p>
-              Using Stories App you can share artworks, memories and much more
-              like a pro. Add informations, videos and much more to your
-              creations.
-            </p>
-            <div className="noBox">
-              <p className="no blueText">No</p>
-              <p>
-                audience algorithm
-                <br />
-                video expiration
-                <br />
-                dances
-                <br />
-                likes count
-                <br />
-                filters
-                <br />
-                time bar
-                <br />
-              </p>
+        <AnimationOnScroll animateIn="animate__fadeInLeft">
+          <h2>
+            Complete your <span className="blueText">history</span> with Stories
+            App.
+          </h2>
+        </AnimationOnScroll>
+        <S.Wrapper>
+          <AnimationOnScroll animateIn="animate__fadeIn" delay=".5">
+            <div className="topics">
+              <img src="/src/Assets/imgs/video.jpg" alt="" />
+              <p>Video based</p>
             </div>
-          </div>
-          <div className="col-b">
-            <Carousel />
-          </div>
-        </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeIn" delay="1">
+            <div className="topics">
+              <img src="/src/Assets/imgs/group.jpg" alt="" />
+              <p>Interest groups</p>
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeIn" delay="1.5">
+            <div className="topics">
+              <img src="/src/Assets/imgs/shop.jpg" alt="" />
+              <p>Special shops</p>
+            </div>
+          </AnimationOnScroll>
+          <AnimationOnScroll animateIn="animate__fadeIn" delay="2">
+            <div className="topics">
+              <img src="/src/Assets/imgs/live.jpg" alt="" />
+              <p>Live commerce</p>
+            </div>
+          </AnimationOnScroll>
+        </S.Wrapper>
       </S.About>
     </S.Main>
   );
