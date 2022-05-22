@@ -10,8 +10,6 @@ Para o desenvolvimento, foi utilizada a API disponibilizada pela empresa.
 
 ---
 
-<img src="./src/Assets/imgs/bg_home.jpg" height="100%" width="100%" alt="Stories App Logo" />
-
 ## Iniciando o projeto
 
 - Clone o repositório em sua máquina
