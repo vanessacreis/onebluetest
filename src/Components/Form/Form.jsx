@@ -60,8 +60,6 @@ const Form = ({ apiroute, namebtn }) => {
             navigate("/login");
           }, 3000);
         }
-
-        console.log(response);
       })
       .catch((error) => {
         if (error) {
