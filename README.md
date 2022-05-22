@@ -10,27 +10,39 @@ Para o desenvolvimento, foi utilizada a API disponibilizada pela empresa.
 
 ---
 
+<img src="./src/Assets/imgs/bg_home.jpg" height="100%" width="100%" alt="Stories App Logo" />
+
 ## Iniciando o projeto
 
 - Clone o repositório em sua máquina
 
-  `git clone https://github.com/vanessacreis/onebluetest.git `
+  ```
+  git clone https://github.com/vanessacreis/onebluetest.git
+  ```
 
 - Acesse a pasta criada
 
-  `cd onebluetest`
+  ```
+  cd onebluetest
+  ```
 
 - Instale os pacotes
 
-  `npm install`
+  ```
+  npm install
+  ```
 
 - Inicie a aplicação
 
-  `npm start`
+  ```
+  npm start
+  ```
 
 - A aplicação será aberta na porta:3000
 
-  `http://localhost:3000`
+  ```
+  http://localhost:3000
+  ```
 
 ---
 
